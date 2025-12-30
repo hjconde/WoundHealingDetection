@@ -1,1 +1,46 @@
 # WoundHealingDetection
+## 📦 Downloading the Wound Healing Dataset
+
+This repository contains code for wound healing analysis. The full image dataset is managed separately due to its size (~800 MB).
+
+### Option 1: Clone the Full Project (Recommended)
+This will download both the code and the dataset.
+```bash
+# 1. Clone the repository (this downloads the code and LFS file pointers)
+git clone https://github.com/hjconde/WoundHealingDetection.git
+
+# 2. Navigate into the project directory
+cd WoundHealingDetection
+
+# 3. Fetch the actual large image files from Git LFS
+git lfs pull
+    Important: You must have Git LFS (Large File Storage) installed to download the actual images. Without it, you will only get small text pointers. Install it from git-lfs.com.
+
+Option 2: Download Only the Dataset
+
+If you are only interested in the raw images, you can download the complete wound_healing_data folder directly:
+
+    Ensure you have Git LFS installed and configured on your system.
+
+    Run the following command to pull only the data directory:
+    bash
+
+git lfs pull --include="wound_healing_data/"
+
+Alternatively, you can browse and download individual files via the GitHub webpage, but you must ensure your Git LFS client is active to convert pointers into real files.
+Dataset Structure
+
+The dataset is organized by imaging modality and time points:
+text
+
+wound_healing_data/
+├── Skin_MT/               # Multiphoton microscopy images
+│   └── Control/          # Control group images (e.g., control-16#.jpg)
+├── Skin_SHG/             # Second Harmonic Generation microscopy images
+│   ├── Day 3/           # Images taken on day 3 post-wounding
+│   └── Day 7/           # Images taken on day 7 post-wounding
+└── ...                   # Other possible groups
+
+Notes on Image Viewing
+
+The .png and .jpg files in this dataset are standard image formats.
