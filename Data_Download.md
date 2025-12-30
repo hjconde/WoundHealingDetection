@@ -4,8 +4,6 @@ This repository contains code for wound healing analysis. The full image dataset
 
 > **Important**: You must have **Git LFS (Large File Storage)** installed to download the actual images. Without it, you will only get small text pointers. Install it from [git-lfs.com](https://git-lfs.com).
 
-### Option 1: Clone the Full Project (Recommended)
-
 This will download both the code and the dataset.
 
 ```bash
